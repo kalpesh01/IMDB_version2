@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row">
+    <ng-container *ngFor="let item of list">
+      <div class="col-4 my-3" *ngIf="item.show">
+        <h5>{{ item.title }}</h5>
+        <!-- <div (click)="contentPage(item.title)">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum tempore
+          neque dolore excepturi. Illo quisquam itaque possimus, veniam sunt,
+          perferendis necessitatibus ut, in temporibus veritatis dolorum quidem
+          nesciunt eos corporis amet dignissimos maxime accusamus assumenda?
+          Architecto harum voluptates, asperiores dolorem vel consequatur ipsum?
+          Quas inventore architecto vitae laudantium maiores officiis doloribus
+          esse harum, repellendus dolor vero. Ab quaerat, sunt error consectetur
+          optio soluta aspernatur? Ducimus inventore est quod sequi molestiae.
+          Amet temporibus omnis </div> -->
+        <!-- <img src="assets/me.jpg" alt="" style="width: 100%; height: 100%" /> -->
+        <div (click)="contentPage(item.title)">
+
+          <img [src]="item.img" alt="" style="height: 100%; width: 100%; object-fit: cover" /> </div>
+
+        <button class="btn btn-outline-secondary" (click)="showDetailsModal(item)">
+          Show Details
+        </button>
+      </div>
+    </ng-container>
+  </div>
+
+  <!-- <div class="row d-flex justify-content-center mt-5">
+    <div class="col-6 bg-white shadow rounded">
+      <ngb-rating [(rate)]="currentRate" (blur)="myfun()"></ngb-rating>
+      <hr>
+      <pre>Rate: <b>{{currentRate}}</b></pre>
+    </div>
+  </div> -->
+</div>
